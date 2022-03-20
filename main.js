@@ -22,7 +22,7 @@ function gotResult(error, results){
     console.error(error);
   }
   else{
-    if((results[0].confidence > 0.5) && (precious_result != results[0].label)){
+    if((results[0].confidence > 0.5) && (previous_result != results[0].label)){
       console.log(results);
       previous_result= results[0].label;
       var synth = window.speechSynthesis;
